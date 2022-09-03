@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
-  "projects": {}
+  "projects": {
+    "ais-website": "apps/ais-website",
+    "ais-website-e2e": "apps/ais-website-e2e"
+  }
 }
