@@ -1,0 +1,42 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/cms/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["sanity build ../../../dist/apps/cms --yes"],
+        "cwd": "apps/cms/src"
+      }
+    },
+    "serve": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["sanity start"],
+        "cwd": "apps/cms/src"
+      }
+    },
+    "lint": {
+      "builder": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/cms/**/*.ts", "apps/cms/**/*.js"]
+      }
+    },
+    "test": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["sanity check"],
+        "cwd": "apps/cms/src"
+      }
+    },
+    "deploy": {
+      "builder": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": ["sanity deploy ./dist/apps/cms"],
+        "cwd": "apps/cms/src"
+      }
+    }
+  },
+  "tags": []
+}
