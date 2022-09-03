@@ -3,6 +3,12 @@
   "sourceRoot": "apps/ais-website",
   "projectType": "application",
   "targets": {
+    "type-check": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "yarn run tsc -b apps/ais-website/tsconfig.json"
+      }
+    },
     "build": {
       "executor": "@nrwl/next:build",
       "outputs": ["{options.outputPath}"],
