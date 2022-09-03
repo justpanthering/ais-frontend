@@ -8,6 +8,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
+        "postcssConfig": "apps/ais-website/postcss.config.js",
         "root": "apps/ais-website",
         "outputPath": "dist/apps/ais-website"
       },
