@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "ais-website": "apps/ais-website",
-    "ais-website-e2e": "apps/ais-website-e2e"
+    "ais-website-e2e": "apps/ais-website-e2e",
+    "cms": "apps/cms"
   }
 }
